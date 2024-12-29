@@ -1,0 +1,216 @@
+/* 
+====================================
+Global Styles
+====================================
+*/
+
+/* Reset margins and paddings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    color: #f4edd3; /* Default text color */
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+  }
+  
+  /* Set the background color for the entire page */
+  body {
+    background-color: #4c585b; /* Neutral dark background */
+  }
+  
+  /* Styling for the main container */
+  main {
+    padding: 3vh; /* Adds spacing inside the container */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    height: auto; /* Automatically adjusts height based on content */
+  }
+  
+  /* Styling for the main heading */
+  h1 {
+    text-align: center; /* Centers the heading */
+    font-size: 7vh; /* Responsive font size based on viewport height */
+  }
+  
+  /* 
+  ====================================
+  Game Choices (Rock, Paper, Scissors)
+  ====================================
+  */
+  
+  /* Container for the game choices */
+  #choiceContainer {
+    height: 50vh; /* Sets the height relative to the viewport */
+    display: flex; /* Flexbox for horizontal alignment */
+    flex-direction: row; /* Aligns items side by side */
+    justify-content: center; /* Centers choices horizontally */
+    align-items: center; /* Centers choices vertically */
+    gap: 2vh; /* Adds space between the choices */
+  }
+  
+  /* Styling for individual choice containers */
+  .choices {
+    height: 35vh; /* Circle dimensions (height and width are the same) */
+    width: 35vh;
+    border-radius: 50%; /* Makes the container circular */
+    display: flex; /* Flexbox for centering images */
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Centers the images vertically */
+  }
+  
+  /* Hover effect for game choices */
+  .choices:hover {
+    background-color: #f4edd3; /* Highlight background on hover */
+    cursor: pointer; /* Changes the cursor to a pointer for interactivity */
+  }
+  
+  /* Styling for images inside choices */
+  .images {
+    height: 30vh; /* Set height for images */
+    width: 30vh; /* Set width for images */
+    border-radius: 15vh; /* Makes the images circular */
+    object-fit: cover; /* Ensures the image fits the container without distortion */
+  }
+  
+  /* 
+  ====================================
+  Scoreboard Section
+  ====================================
+  */
+  
+  /* Styling for the scoreboard container */
+  #scoreBoard {
+    width: 30vh; /* Sets the width of the scoreboard */
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: space-between; /* Spaces out user and computer scores */
+  }
+  
+  /* Styling for individual scoreboards */
+  #userScoreBoard, #compScoreBoard {
+    font-size: 4vh; /* Sets font size for scores and labels */
+    text-align: center; /* Centers the text */
+  }
+  
+  /* 
+  ====================================
+  Message Section
+  ====================================
+  */
+  
+  /* Container for messages displayed during the game */
+  #messContainer {
+    font-size: 5vh; /* Sets font size for the message */
+    text-align: center; /* Centers the message text */
+    margin-top: 4vh; /* Adds space above the container */
+    background-color: #a5bfcc; /* Light background for contrast */
+    padding: 1vh; /* Adds padding inside the container */
+    border-radius: 1vh; /* Rounded corners */
+  }
+  
+  /* Styling for the message text */
+  #message {
+    color: #4c585b; /* Sets text color to contrast the background */
+    margin: 1vh; /* Adds spacing around the text */
+    padding: 1vh; /* Adds padding inside the text container */
+  }
+  
+  /* 
+  ====================================
+  Responsive Media Queries
+  ====================================
+  */
+  
+  /* Media Query: For tablets (max-width: 1024px) */
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 6vh; /* Reduce heading size */
+    }
+  
+    #choiceContainer {
+      height: 45vh; /* Adjust the height of the container */
+    }
+  
+    .choices {
+      height: 30vh; /* Reduce choice size */
+      width: 30vh;
+    }
+  
+    .images {
+      height: 25vh; /* Reduce image size */
+      width: 25vh;
+      border-radius: 12.5vh; /* Adjust border radius to maintain circular shape */
+    }
+  
+    #scoreBoard {
+      width: 25vh; /* Adjust width for smaller devices */
+    }
+  
+    #messContainer {
+      font-size: 4.5vh; /* Reduce font size for the message */
+    }
+  }
+  
+  /* Media Query: For mobile phones (max-width: 768px) */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 5vh; /* Further reduce heading size */
+    }
+  
+    #choiceContainer {
+      height: 40vh; /* Adjust the height of the container */
+      gap: 1.5vh; /* Reduce spacing between choices */
+    }
+  
+    .choices {
+      height: 25vh; /* Further reduce choice size */
+      width: 25vh;
+    }
+  
+    .images {
+      height: 20vh; /* Adjust image size */
+      width: 20vh;
+      border-radius: 10vh; /* Adjust border radius */
+    }
+  
+    #scoreBoard {
+      width: 20vh; /* Adjust width for smaller devices */
+      font-size: 3vh; /* Reduce font size for scores */
+    }
+  
+    #messContainer {
+      font-size: 4vh; /* Adjust font size for the message */
+    }
+  }
+  
+  /* Media Query: For extra-small devices (max-width: 480px) */
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 4vh; /* Reduce heading size for small screens */
+    }
+  
+    #choiceContainer {
+      height: 35vh; /* Further reduce container height */
+    }
+  
+    .choices {
+      height: 20vh; /* Smallest size for choices */
+      width: 20vh;
+    }
+  
+    .images {
+      height: 15vh; /* Smallest size for images */
+      width: 15vh;
+      border-radius: 7.5vh; /* Adjust border radius */
+    }
+  
+    #scoreBoard {
+      width: 18vh; /* Smallest width for the scoreboard */
+      font-size: 2.5vh; /* Small font for scores */
+    }
+  
+    #messContainer {
+      font-size: 3.5vh; /* Smallest font size for the message */
+    }
+  }
+  
