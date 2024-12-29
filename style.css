@@ -15,6 +15,7 @@ Global Styles
   /* Set the background color for the entire page */
   body {
     background-color: #4c585b; /* Neutral dark background */
+    font-family: Arial, sans-serif; /* Set a clean default font */
   }
   
   /* Styling for the main container */
@@ -31,6 +32,7 @@ Global Styles
   h1 {
     text-align: center; /* Centers the heading */
     font-size: 7vh; /* Responsive font size based on viewport height */
+    margin-bottom: 4vh; /* Adds spacing below the heading */
   }
   
   /* 
@@ -42,6 +44,7 @@ Global Styles
   /* Container for the game choices */
   #choiceContainer {
     height: 50vh; /* Sets the height relative to the viewport */
+    width: 70vh; /* Defines a fixed width */
     display: flex; /* Flexbox for horizontal alignment */
     flex-direction: row; /* Aligns items side by side */
     justify-content: center; /* Centers choices horizontally */
@@ -51,12 +54,13 @@ Global Styles
   
   /* Styling for individual choice containers */
   .choices {
-    height: 35vh; /* Circle dimensions (height and width are the same) */
-    width: 35vh;
+    height: 24vh; /* Circle dimensions (height and width are the same) */
+    width: 24vh;
     border-radius: 50%; /* Makes the container circular */
     display: flex; /* Flexbox for centering images */
     justify-content: center; /* Centers the images horizontally */
     align-items: center; /* Centers the images vertically */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
   }
   
   /* Hover effect for game choices */
@@ -67,9 +71,9 @@ Global Styles
   
   /* Styling for images inside choices */
   .images {
-    height: 30vh; /* Set height for images */
-    width: 30vh; /* Set width for images */
-    border-radius: 15vh; /* Makes the images circular */
+    height: 20vh; /* Set height for images */
+    width: 20vh; /* Set width for images */
+    border-radius: 50%; /* Makes the images circular */
     object-fit: cover; /* Ensures the image fits the container without distortion */
   }
   
@@ -84,6 +88,7 @@ Global Styles
     width: 30vh; /* Sets the width of the scoreboard */
     display: flex; /* Flexbox for horizontal alignment */
     justify-content: space-between; /* Spaces out user and computer scores */
+    margin-top: 3vh; /* Adds spacing above the scoreboard */
   }
   
   /* Styling for individual scoreboards */
@@ -100,11 +105,11 @@ Global Styles
   
   /* Container for messages displayed during the game */
   #messContainer {
-    font-size: 5vh; /* Sets font size for the message */
+    font-size: 4.5vh; /* Sets font size for the message */
     text-align: center; /* Centers the message text */
     margin-top: 4vh; /* Adds space above the container */
     background-color: #a5bfcc; /* Light background for contrast */
-    padding: 1vh; /* Adds padding inside the container */
+    padding: 1.5vh; /* Adds padding inside the container */
     border-radius: 1vh; /* Rounded corners */
   }
   
@@ -128,26 +133,27 @@ Global Styles
     }
   
     #choiceContainer {
-      height: 45vh; /* Adjust the height of the container */
+      width: 100%; /* Adjust the width to fit the screen */
+      gap: 1.5vh; /* Reduce spacing between choices */
     }
   
     .choices {
-      height: 30vh; /* Reduce choice size */
-      width: 30vh;
+      height: 22vh; /* Reduce choice size */
+      width: 22vh;
     }
   
     .images {
-      height: 25vh; /* Reduce image size */
-      width: 25vh;
-      border-radius: 12.5vh; /* Adjust border radius to maintain circular shape */
+      height: 18vh; /* Reduce image size */
+      width: 18vh;
     }
   
     #scoreBoard {
       width: 25vh; /* Adjust width for smaller devices */
+      font-size: 3.5vh; /* Reduce font size for scores */
     }
   
     #messContainer {
-      font-size: 4.5vh; /* Reduce font size for the message */
+      font-size: 4vh; /* Adjust font size for the message */
     }
   }
   
@@ -158,59 +164,57 @@ Global Styles
     }
   
     #choiceContainer {
-      height: 40vh; /* Adjust the height of the container */
-      gap: 1.5vh; /* Reduce spacing between choices */
+      flex-direction: column; /* Stack choices vertically */
+      height: auto; /* Adjust height for stacked layout */
     }
   
     .choices {
-      height: 25vh; /* Further reduce choice size */
-      width: 25vh;
+      height: 20vh; /* Further reduce choice size */
+      width: 20vh;
     }
   
     .images {
-      height: 20vh; /* Adjust image size */
-      width: 20vh;
-      border-radius: 10vh; /* Adjust border radius */
+      height: 18vh; /* Adjust image size */
+      width: 18vh;
     }
   
     #scoreBoard {
-      width: 20vh; /* Adjust width for smaller devices */
-      font-size: 3vh; /* Reduce font size for scores */
+      width: 22vh; /* Adjust width for smaller devices */
+      font-size: 3vh; /* Small font for scores */
     }
   
     #messContainer {
-      font-size: 4vh; /* Adjust font size for the message */
+      font-size: 3.5vh; /* Adjust font size for the message */
     }
   }
   
   /* Media Query: For extra-small devices (max-width: 480px) */
   @media screen and (max-width: 480px) {
     h1 {
-      font-size: 4vh; /* Reduce heading size for small screens */
+      font-size: 4vh; /* Smallest heading size */
     }
   
     #choiceContainer {
-      height: 35vh; /* Further reduce container height */
+      gap: 1vh; /* Minimal spacing between choices */
     }
   
     .choices {
-      height: 20vh; /* Smallest size for choices */
-      width: 20vh;
+      height: 18vh; /* Smallest size for choices */
+      width: 18vh;
     }
   
     .images {
-      height: 15vh; /* Smallest size for images */
-      width: 15vh;
-      border-radius: 7.5vh; /* Adjust border radius */
+      height: 16vh; /* Smallest size for images */
+      width: 16vh;
     }
   
     #scoreBoard {
       width: 18vh; /* Smallest width for the scoreboard */
-      font-size: 2.5vh; /* Small font for scores */
+      font-size: 2.5vh; /* Minimal font size for scores */
     }
   
     #messContainer {
-      font-size: 3.5vh; /* Smallest font size for the message */
+      font-size: 3vh; /* Smallest font size for the message */
     }
   }
   
